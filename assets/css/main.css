@@ -4719,3 +4719,33 @@ select:focus-visible {
     font-size: 16px;
   }
 }
+/* Correção do vídeo principal em dispositivos móveis */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    background-color: #000;
+  }
+
+  .hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: #000;
+  }
+
+  .hero h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero .container {
+    width: 100%;
+    padding-inline: 16px;
+  }
+}
