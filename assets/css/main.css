@@ -796,8 +796,12 @@ section,
 }
 
 /*--------------------------------------------------------------
+<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Hero Section - Video Background Optimization
+=======
+# Hero Section
+>>>>>>> origin/main
 --------------------------------------------------------------*/
 .hero {
   padding-top: 80px;
@@ -810,7 +814,10 @@ section,
   padding-bottom: 80px;
 }
 
+<<<<<<< HEAD
 /* Desktop: video covers full viewport with overlay */
+=======
+>>>>>>> origin/main
 .hero img,
 .hero video {
   position: absolute;
@@ -823,6 +830,7 @@ section,
   z-index: 1;
 }
 
+<<<<<<< HEAD
 /* Mobile optimization: hide video, show static background image
    Improves performance (no video decode/render on mobile) and UX
    (landscape videos look poor in portrait orientation) */
@@ -837,6 +845,21 @@ section,
     background-position: center;
     background-repeat: no-repeat;
   }
+=======
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+>>>>>>> origin/main
 }
 
 .hero h2 {
@@ -3159,7 +3182,11 @@ section,
 }
 
 .service-details .testimonial-section .testimonial-card blockquote::before {
+<<<<<<< HEAD
   content: "“";
+=======
+  content: "â€œ";
+>>>>>>> origin/main
   position: absolute;
   left: 0;
   top: -10px;
@@ -3429,7 +3456,11 @@ section,
 }
 
 .terms-of-service .tos-content .content-section .disclaimer-box ul li::before {
+<<<<<<< HEAD
   content: "•";
+=======
+  content: "â€¢";
+>>>>>>> origin/main
   position: absolute;
   left: 8px;
   color: var(--accent-color);
@@ -4389,7 +4420,11 @@ select:focus-visible {
   outline-offset: 2px !important;
 }
 
+<<<<<<< HEAD
 /* Reduzir animações para usuários que preferem */
+=======
+/* Reduzir animaÃ§Ãµes para usuÃ¡rios que preferem */
+>>>>>>> origin/main
 @media (prefers-reduced-motion: reduce) {
   .clients-track,
   .progress-bar::after {
@@ -4403,8 +4438,30 @@ select:focus-visible {
   }
 }
 
+<<<<<<< HEAD
 /* Mobile optimization: video hidden, static background shown
    (consolidated from duplicate blocks at lines ~4403 and ~4731) */
+=======
+/* Otimizar vÃ­deo hero em mobile */
+@media (max-width: 576px) {
+  .hero {
+    background-color: #000;
+  }
+
+  .hero video {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+    object-position: center;
+    background-color: #000;
+  }
+}
+>>>>>>> origin/main
 
 /*--------------------------------------------------------------
 # Terms and Privacy Pages Styles
@@ -4714,5 +4771,27 @@ select:focus-visible {
     font-size: 16px;
   }
 }
+<<<<<<< HEAD
 /* Mobile optimization: video hidden, static background shown
    (consolidated from duplicate blocks at lines ~4403 and ~4731) */
+=======
+/* VÃ­deo principal: exibir o quadro completo em celulares */
+@media (max-width: 576px) {
+  .hero {
+    background-color: #000;
+  }
+
+  .hero video {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+    object-position: center;
+    background-color: #000;
+  }
+}
+>>>>>>> origin/main
